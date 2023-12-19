@@ -8,8 +8,8 @@ function App() {
 
   useEffect(()=>{
 
-    /*var url = 'https://newsapi.org/v2/everything?' +
-          'q=events&' +
+    var url = 'https://newsapi.org/v2/everything?' +
+          'q=business&' +
           'from=2023-12-18&' +
           'apiKey=8e25809a096149d5ba4d480b6623f1b6';
     var req = new Request(url);
@@ -20,7 +20,7 @@ function App() {
       setArticles(news.articles);
     }).catch((err)=>{
       console.log(err);
-    })*/
+    })
 
   },[])
   return (
@@ -30,10 +30,13 @@ function App() {
         <input type="text" name='search' id='search' placeholder='Search News' autoCorrect='off' value=""></input>
       </header>
       <section className='news-articles'>
-        <News/>
-        <News/>
-        <News/>
-        <News/>
+        {
+          articles.map((articles)=>{
+            return(
+              <News/>
+            )
+          })
+        }
       </section>
       
     </div>
