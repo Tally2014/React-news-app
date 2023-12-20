@@ -45,6 +45,9 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png");
+  background-repeat: no-repeat;
+  vertical-align: middle;
 }
 
 .news-img img {
